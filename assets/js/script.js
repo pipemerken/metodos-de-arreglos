@@ -1,7 +1,7 @@
 const tareas = [
-    { id: 100, nombre: "Asistir a clases", realizado: false },
-    { id: 101, nombre: "Hacer las tareas", realizado: false },
-    { id: 102, nombre: "Realizar desafio", realizado: false },
+    { id: 100, nombre: "Hacer Mercado", realizado: false },
+    { id: 101, nombre: "Estudiar para la prueba", realizado: false },
+    { id: 102, nombre: "Sacar a pasear a Tobby", realizado: false },
   ];
 
   const btn = document.querySelector("#agregar");
@@ -42,7 +42,7 @@ const tareas = [
       })' ${tarea.realizado === true ? "checked" : null}></div>
       <div class="col-2"><button class="mb-1 btn btn-danger" onclick='eliminar(${
         tarea.id
-      })'><i class="fa-solid fa-trash"></i></button></div> 
+      })'><i class="fa-solid fa-circle-xmark"></i></button></div> 
       </div>
       `;
     });
@@ -56,7 +56,7 @@ const tareas = [
     let value = document.querySelector("input").value;
     let num1 = 100;
     let num2 = 999;
-    let numeroAleatorio = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;     //para que el numero generado sea un numero entero
+    let numeroAleatorio = Math.floor(Math.random() * (num2 - num1 + 1)) + num1;   
     let nueva_actividad = {
         id: numeroAleatorio,
       nombre: value,
